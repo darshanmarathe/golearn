@@ -1,18 +1,19 @@
 cls
-go build main.go
-go build vari.go
-go build const.go
+start go build collections.go
+start go build main.go
+start go build vari.go
+start go build const.go
+
 pause
 cls
 main.exe
-pause
 cls
 vari.exe
-pause
 cls
 const.exe
+cls
+collections.exe
 pause
 cls
 del *.exe
 cls
-push
