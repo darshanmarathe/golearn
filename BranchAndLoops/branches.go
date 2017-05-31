@@ -1,7 +1,7 @@
 package main
 
-func main()  {
-	marks := 30 
+func main() {
+	marks := 30
 	if marks >= 20 {
 		println("passed")
 	} else {
@@ -13,11 +13,11 @@ func main()  {
 	}
 
 	switch marks {
-		case 10:
+	case 10:
 		println("ten")
-		case 30:
+	case 30:
 		println("thirty")
-			
+
 	}
 
 }

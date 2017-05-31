@@ -26,7 +26,7 @@ type OnlineEmployee struct {
 	salary     int
 }
 
-func newOnlieEmployee (fname string, lname string, mName string, sal int) *OnlineEmployee {
+func newOnlieEmployee(fname string, lname string, mName string, sal int) *OnlineEmployee {
 	oute := OnlineEmployee{}
 	oute.FirstName = fname
 	oute.LastName = lname

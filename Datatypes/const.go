@@ -4,19 +4,19 @@ import "fmt"
 
 //normal example
 const (
-	firstname ="Darshan"
+	firstname  = "Darshan"
 	middleName = "Narayan"
-	lastName = "Marathe"
+	lastName   = "Marathe"
 )
 
 //iota example
-const(
-	first = 1 << (10 * iota)
+const (
+	first  = 1 << (10 * iota)
 	secend
 	third
 )
 
-func main()  {
+func main() {
 	println("Normal example")
 	fmt.Println(firstname)
 	fmt.Println(middleName)

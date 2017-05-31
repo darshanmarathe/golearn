@@ -1,28 +1,24 @@
-package main 
+package main
 
 import (
 	"fmt"
 )
 
-type Driver struct{
-	FirstName string 
-	LastName string
-
+type Driver struct {
+	FirstName string
+	LastName  string
 }
 
-
-func main()  {
+func main() {
 	d := Driver{}
 	d.FirstName = "Darshan"
 	d.LastName = "Marathe"
 
 	println(d.FirstName + " " + d.LastName)
 
-
 	fmt.Println(d)
-	
 
-	a := Driver{"Ankit" , "Goel"}
+	a := Driver{"Ankit", "Goel"}
 	println(a.FirstName + " " + a.LastName)
 
 	fmt.Println(a)

@@ -1,8 +1,9 @@
 package main
 
-import ( 
+import (
 	"fmt"
 )
+
 const (
 	message = "Hello go!"
 )
@@ -11,12 +12,11 @@ var (
 	item string
 )
 
-func main(){
+func main() {
 	fmt.Println(message)
 	fmt.Println(item)
 }
 
-
-func init(){
+func init() {
 	item = "hello world!"
 }
