@@ -9,6 +9,11 @@ const (
 	lastName   = "Marathe"
 )
 
+const(
+	age =20
+	gender = "male"
+)
+
 //iota example
 const (
 	first  = 1 << (10 * iota)
@@ -26,4 +31,8 @@ func main() {
 	fmt.Println(first)
 	fmt.Println(secend)
 	fmt.Println(third)
+
+	println("other exmaple")
+	fmt.Println(age);
+	fmt.Println(gender)
 }
