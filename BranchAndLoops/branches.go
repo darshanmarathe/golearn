@@ -1,17 +1,14 @@
 package main
 
 func main() {
-	marks := 30
-	if marks >= 20 {
-		println("passed")
-	} else {
-		println("failed")
-	}
+	marks := CheckIfCondition()
 
-	if percent := 20; percent > 10 {
-		println("good percent")
-	}
+	Inline_If_exmple()
 
+	Switch_case_example(marks)
+}
+
+func Switch_case_example(marks int) {
 	switch marks {
 	case 10:
 		println("ten")
@@ -19,5 +16,20 @@ func main() {
 		println("thirty")
 
 	}
+}
 
+func Inline_If_exmple() {
+	if percent := 20; percent > 10 {
+		println("good percent")
+	}
+}
+
+func CheckIfCondition() int {
+	marks := 30
+	if marks >= 20 {
+		println("passed")
+	} else {
+		println("failed")
+	}
+	return marks
 }

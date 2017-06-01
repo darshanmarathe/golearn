@@ -14,10 +14,10 @@ func main() {
 	fmt.Println(count, num1)
 	fmt.Println(count1, num2)
 	fmt.Println(num3)
-	fmt.Println(Concat("Hello" , "I am" , "Darshan" , "Marathe" ))
+	fmt.Println(Concat("Hello", "I am", "Darshan", "Marathe"))
 }
 
-func Concat(s1,s2,s3,s4 string)string{
+func Concat(s1, s2, s3, s4 string) string {
 	space := " "
 	return s1 + space + s2 + space + s3 + space + s4
 }
@@ -37,7 +37,6 @@ func AddandCount(nums ...int) (int, int) {
 	}
 	return len(nums), result
 }
-
 
 //named return values
 func AddandCount_Namedreturn(nums ...int) (count int, result int) {

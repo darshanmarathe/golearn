@@ -1,15 +1,13 @@
-package main 
+package main
 
 import (
 	"fmt"
 )
 
-
-
 type PrinterFunc func(string) ()
 
-func main(){
-	 Concatnitor := Concat("Hello")
+func main() {
+	Concatnitor := Concat("Hello")
 	Concatnitor(" World")
 	Concatnitor(" this")
 	Concatnitor(" is")
@@ -18,17 +16,12 @@ func main(){
 	Concatnitor(" showing closures")
 }
 
-
-
-func Concat(s string)(func(ar string)){
+func Concat(s string) (func(ar string)) {
 
 	var line = s
-	return func(z string){
+	return func(z string) {
 		line += z
 		fmt.Println(line)
 	}
 
-
 }
-
-

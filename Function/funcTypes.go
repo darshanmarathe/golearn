@@ -1,23 +1,20 @@
-package main 
+package main
 
 import (
 	"fmt"
 )
 
-
-
 type PrinterFunc func(string) ()
 
-func main(){
-	Concat(Print , "yes", "golang", "is", "a", "functional", "programing", "language")
-	Reverse(Print , "yes", "golang", "is", "a", "functional", "programing", "language")
-Concat(func(line string){ 
-	fmt.Println(line) 
-} , "Anonomus" , "functions" , "?" )
+func main() {
+	Concat(Print, "yes", "golang", "is", "a", "functional", "programing", "language")
+	Reverse(Print, "yes", "golang", "is", "a", "functional", "programing", "language")
+	Concat(func(line string) {
+		fmt.Println(line)
+	}, "Anonomus", "functions", "?")
 }
 
-
-func Concat(onDone func(string) , messages ...string){
+func Concat(onDone func(string), messages ...string) {
 	line := ""
 	for _, later := range messages {
 		line += " " + later
@@ -25,11 +22,10 @@ func Concat(onDone func(string) , messages ...string){
 	onDone(line)
 }
 
-
-func Reverse(onDone PrinterFunc , meesages ...string){
+func Reverse(onDone PrinterFunc, meesages ...string) {
 	line := ""
-	max := len(meesages)  
-	
+	max := len(meesages)
+
 	for index := 0; index < len(meesages); index++ {
 		max--
 		line += " " + meesages[max]
@@ -39,6 +35,6 @@ func Reverse(onDone PrinterFunc , meesages ...string){
 
 }
 
-func Print(msg string){
+func Print(msg string) {
 	fmt.Println(msg)
 }
