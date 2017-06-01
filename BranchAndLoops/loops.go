@@ -1,9 +1,57 @@
 package main
 
+import (
+	"fmt"
+	"time"
+)
+
 func main() {
-	for_loops()
+	Basic_For_Loop()
+	WhileLopp()
+	for_with_break()
 	foreach()
+	infinit()
 }
+
+
+func Basic_For_Loop(){
+	fmt.Println("Basic for loop")
+	for index := 0; index < 5; index++ {
+		println(index)
+	}
+	fmt.Println("Done")
+	fmt.Println("")
+	fmt.Println("")
+
+}
+
+
+func WhileLopp(){
+	fmt.Println("While for loop")
+	index := 0
+	for  index < 5  {
+		index++
+		println(index)
+	}
+	fmt.Println("Done")
+	fmt.Println("")
+	fmt.Println("")
+}
+
+func for_with_break() {
+
+	i := 0
+	for {
+		i++
+		println(i)
+		if i > 5 {
+
+			break
+		}
+	}
+
+}
+
 
 func foreach() {
 	s := []string{"Darshan", "Rajesh", "Amol"}
@@ -21,20 +69,15 @@ func foreach() {
 	}
 }
 
-func for_loops() {
-
-	for index := 0; index < 30; index++ {
-		println(index)
-	}
-
-	i := 0
+func infinit(){
+	i := 0;
 	for {
 		i++
-		println(i)
-		if i > 5 {
-
-			break
+		if i % 2 ==0 {
+			continue
 		}
+		//gap := i * 100
+		time.Sleep(1000)
+		fmt.Println("Printing till infinity => " , i )
 	}
-
 }

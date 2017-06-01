@@ -56,11 +56,10 @@ func SwitchDemo2(name string) (title string) {
 	return
 }
 
-
-//Inline condition checking 
+//Inline condition checking
 func SwitchDemo3(name string) (title string) {
 
-	switch  {
+	switch {
 	case name == "Darshan":
 		title = "Mr"
 	case name == "Aditi":
@@ -77,18 +76,17 @@ func SwitchDemo3(name string) (title string) {
 	return
 }
 
-
 //Type check
-func SwitchCheckType(x interface{}){
+func SwitchCheckType(x interface{}) {
 	switch x.(type) {
 	case int:
 		fmt.Println("int")
 	case string:
 		fmt.Println("string")
 	case bool:
-	     fmt.Println("bool")
+		fmt.Println("bool")
 	default:
 		fmt.Println("unknown")
-		
+
 	}
 }
