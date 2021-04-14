@@ -1,4 +1,4 @@
-package main
+repackage main
 
 func main() {
 	marks := CheckIfCondition()
@@ -32,4 +32,11 @@ func CheckIfCondition() int {
 		println("failed")
 	}
 	return marks
+}
+
+func CheckMarks() int {
+	marks := 30
+	if marks >= 20 {
+		println("this is more than cool code ")
+	}
 }
