@@ -1,14 +1,21 @@
 package main
 
-import "runtime"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
-	runtime.GOMAXPROCS(10)
+
+	runtime.GOMAXPROCS(runtime.NumCPU() * 2)
 
 	ch := make(chan string)
 	doneCh := make(chan bool)
 	go abcgen(ch)
+	go abcgen(ch)
+	go abcgen(ch)
 	go Printer(ch, doneCh)
+	fmt.Println("The number of GO 	Cores:", runtime.NumGoroutine())
 
 	println("here it came first")
 	<-doneCh

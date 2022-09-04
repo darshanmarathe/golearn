@@ -1,11 +1,13 @@
 package main
 
-import "time"
-import "runtime"
+import (
+	"runtime"
+	"time"
+)
 
 func main() {
 	runtime.GOMAXPROCS(10)
-	go abcgen()
+	abcgen()
 	time.Sleep(100 * time.Millisecond)
 
 }
