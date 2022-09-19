@@ -12,6 +12,7 @@ func main() {
 
 	if e, ok := err.(*os.PathError); ok {
 		fmt.Printf("Using Assert: Error e is of type path error. Path: %v\n", e.Path)
+		os.Create("non-existing.txt")
 	} else {
 		fmt.Println("Using Assert: Error not of type path error")
 	}
