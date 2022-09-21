@@ -47,17 +47,20 @@ func main() {
 
 	fmt.Println(msg)
 
-	for {
-		select {
-		case res, ok := <-messages2:
-			if ok {
-
-				fmt.Println(res)
-			} else {
-				return
-			}
-		}
+	for v := range messages2 {
+		fmt.Println(v)
 	}
+	// for {
+	// 	select {
+	// 	case res, ok := <-messages2:
+	// 		if ok {
+
+	// 			fmt.Println(res)
+	// 		} else {
+	// 			return
+	// 		}
+	// 	}
+	// }
 
 	// msg2 := <-messages2
 	// fmt.Println(msg2)
